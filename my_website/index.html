@@ -98,7 +98,7 @@
         margin: 50px 0 30px 0;
       }
 
-      input, button {
+      button {
         border: 0;
         padding: 10px;
         font-size: 18px;
@@ -118,13 +118,13 @@
       }
 
       #btn-send-message {
-        width: 148px;
+        width: 248px;
         background: #32CD32;
         color: white;
       }
 
-      input[type="reset"] {
-        width: 248px;
+      #btn-clear-message {
+        width: 148px;
       }
 
       /**
@@ -194,7 +194,7 @@
         <h2>Please send me message if you like</h2>
         <div>
           <textarea id="message-to-masa" placeholder="Message to masa"></textarea>
-          <input type="reset" value="Clear">
+          <button id="btn-clear-message">Clear</button>
           <button id="btn-send-message">Send</button>
         </div>
       </aside>
@@ -219,9 +219,17 @@
           ; // end window.location.href
       }
 
+      /**
+       * Clear the text in the textarea.
+       */
+      function clearMsg() {
+          document.getElementById('message-to-masa').value = "";
+      }
+
       // Add the click listener to send message button
       document.addEventListener('DOMContentLoaded', function() {
           document.getElementById("btn-send-message").addEventListener("click", sendEmail, false);
+          document.getElementById("btn-clear-message").addEventListener("click", clearMsg, false);
       });
     </script>
   </body>
