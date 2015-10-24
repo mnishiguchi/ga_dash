@@ -4,69 +4,197 @@
     <!-- Meta info -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="Masatoshi Nishiguchi's profile page">
     <meta name="author" content="Masatoshi Nishiguchi">
 
     <title>Masatoshi Nishiguchi</title>
 
+    <!-- Styles -->
+    <style>
+      /**
+       * Universal
+       */
+      body {
+        background: url(http://i.imgur.com/kVJs7Pb.jpg);
+        font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+
+      /**
+       * Navbar at the top
+       */
+      nav.top-nav {
+        min-width: 800px;
+        line-height: 50px;
+        height: 50px;
+        background-color: rgba(0,0,51,0.8);
+      }
+
+      .top-nav .logo {
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      .top-nav ul {
+        list-style: none;
+
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        float: right;
+      }
+
+      .top-nav li {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2em;
+        display: inline-block;
+        line-height: 50px;
+        height: 50px;
+        margin-right: -4px;
+      }
+
+      .top-nav a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: 0.3s background-color;
+        padding: 0 20px;
+      }
+
+      .top-nav a:hover {
+        background-color: #330F53;
+      }
+
+      .top-nav a.active {
+        background-color: #330F53;
+        color: #EEE;
+        cursor: default;
+      }
+
+      /**
+       * Page contents
+       */
+      h1 {
+        font-size: 3.8em;
+      }
+
+      p {
+        font-size: 1.3em;
+        font-weight: 400;
+      }
+
+      .profile-picture img {
+        width: 250px;
+        height: 250;
+        float: right;
+      }
+
+      aside.email-me {
+        margin: 30px 0;
+      }
+
+      /**
+       * Form
+       */
+
+      input {
+        border: 0;
+        padding: 10px;
+        font-size: 18px;
+      }
+
+      input[type="button"] {
+          background: #32CD32;
+          color: white;
+      }
+
+      /**
+       * Footer
+       */
+      footer {
+        font-size: 1.2em;
+        line-height: 3em;
+        margin-top: 45px;
+        padding-top: 5px;
+        color: white;
+        clear: both;
+      }
+
+      footer a,
+      footer a:hover {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container">
 
-      <!-- Site header -->
-      <header>
+    <!-- Site header -->
+    <header>
 
-        <!-- Navbar -->
-        <nav class="navbar">
-          <a class="logo" href="#">Masatoshi Nishiguchi</a>
+      <!-- Navbar -->
+      <nav class="top-nav">
 
-          <!-- Nav links -->
-          <ul class="nav nav-pills pull-right">
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://twitter.com/MNishiguchiDC" target="_blank"
-                 data-toggle="tooltip" title="Twitter">Twitter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://github.com/mnishiguchi" target="_blank"
-                 data-toggle="tooltip" title="Github">Github</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="https://www.linkedin.com/in/mnishiguchi" target="_blank"
-                 data-toggle="tooltip" title="Linkedin">Linkedin</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                 href="mailto:masatoshi.nishiguchi@udc.edu?Subject=Contact%20from%20http://mnishiguchi.github.io/"
-                 data-toggle="tooltip" title="Email">Email</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <a class="logo" href="#">Masatoshi Nishiguchi</a>
 
-      <div class="row">
+        <ul>
+          <li>
+            <a href="https://twitter.com/MNishiguchiDC" target="_blank"
+               data-toggle="tooltip" title="Twitter">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/mnishiguchi" target="_blank"
+               data-toggle="tooltip" title="Github">Github</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mnishiguchi" target="_blank"
+               data-toggle="tooltip" title="Linkedin">Linkedin</a>
+          </li>
+          <li>
+            <a href="mailto:masatoshi.nishiguchi@udc.edu?Subject=Contact%20from%20http://mnishiguchi.github.io/"
+               data-toggle="tooltip" title="Email">Email</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <!-- Picture -->
-        <div>
-          <figure class="profile-picture">
-            <img class="masa-chinatown" src="images/masa_chinatown.png" alt="masatoshi">
-            <figcaption><span>Ruby on Rails developer</span></figcaption>
-          </figure>
-        </div>
+    <div class="page-content">
+
+      <h1>Hello, this is Masatoshi</h1>
+      <p>
+        You can call me Masa.<br />
+        <br />
+        I really like coding. I enjoy building Rails and Android apps.<br />
+        Now I am ready to join the GA and get an awesome job!
+      </p>
+
+      <img class="masa-chinatown" src="https://avatars1.githubusercontent.com/u/7563926?v=3&s=460" alt="masatoshi">
+
+      <aside class="email-me">
+        <h2>Please send me message if you like</h2>
+        <form>
+          <input type="email" placeholder="Your email">
+          <a href="mailto:masatoshi.nishiguchi@udc.edu?subject=Hello%20Masatoshi%21%20How%20are%20you%3F&amp;body=Masa%2C%20this%20page%20looks%20great%21%21%21%20You%20are%20the%20man%21%21%21">
+            <input type="button" value="Send">
+          </a>
+        </form>
+      </aside>
 
       <footer>
-        <p>&copy; 2015 Masatoshi Nishiguchi</p>
+        <small>&copy; 2015 <a href="http://mnishiguchi.github.io/" target="_blank">Masatoshi Nisihguchi</a></small>
       </footer>
 
     </div>
 
     <!-- javascripts -->
     <script>
-      // do something cool
+      // Do something cool
     </script>
   </body>
 </html>
