@@ -117,7 +117,7 @@
         margin-bottom: 4px;
       }
 
-      button.btn-send {
+      #btn-send-message {
         width: 148px;
         background: #32CD32;
         color: white;
@@ -192,11 +192,11 @@
 
       <aside class="email-me">
         <h2>Please send me message if you like</h2>
-        <form>
+        <div>
           <textarea id="message-to-masa" placeholder="Message to masa"></textarea>
           <input type="reset" value="Clear">
-          <button class="btn-send" onclick="sendEmail(); return false">Send</button>
-        </form>
+          <button id="btn-send-message">Send</button>
+        </div>
       </aside>
 
       <footer>
@@ -206,6 +206,7 @@
     </div>
 
     <!-- javascripts -->
+
     <script>
       /**
        * Opens the default email program with title, address and message prefilled.
@@ -217,6 +218,11 @@
             + "&body=" + escape(document.getElementById('message-to-masa').value)
           ; // end window.location.href
       }
+
+      // Add the click listener to send message button
+      document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById("btn-send-message").addEventListener("click", sendEmail, false);
+      });
     </script>
   </body>
 </html>
