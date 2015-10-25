@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<head>
+  <!-- Meta info -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Masatoshi Nishiguchi's profile page">
+  <meta name="author" content="Masatoshi Nishiguchi">
+
+  <title>Masatoshi Nishiguchi</title>
+
+  <!-- Styles -->
+  <style>
+    /**
+     * Universal
+     */
+    body {
+      background: url(http://i.imgur.com/kVJs7Pb.jpg);
+      font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    /**
+     * Navbar at the top
+     */
+    nav.top-nav {
+      min-width: 800px;
+      line-height: 50px;
+      height: 50px;
+      background-color: rgba(0,0,51,0.8);
+    }
+
+    .top-nav .logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      float: right;
+    }
+
+    .top-nav li {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2em;
+      display: inline-block;
+      line-height: 50px;
+      height: 50px;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: 0.3s background-color;
+      padding: 0 20px;
+    }
+
+    .top-nav a:hover {
+      background-color: #330F53;
+    }
+
+    .top-nav a.active {
+      background-color: #330F53;
+      color: #EEE;
+      cursor: default;
+    }
+
+    /**
+     * Page contents
+     */
+    h1 {
+      font-size: 3.8em;
+      clear: both;
+      margin: 60px 0 20px 0;
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    img.masa-chinatown {
+      width: 400px;
+      height: 400px;
+    }
+
+    aside.email-me {
+      margin: 50px auto 30px auto;
+      width: 400px;
+    }
+
+    button {
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 1.0em;
+      padding: 1.0em;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      width: 400px;
+      height: 150px;
+      border: 0;
+      padding: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+      margin-bottom: 4px;
+      background-color: rgba(230, 230, 230, 0.6);
+    }
+
+    #btn-send-message {
+      width: 248px;
+      background: #32CD32;
+      color: white;
+      float: right;
+    }
+
+    #btn-clear-message {
+      width: 148px;
+      float: left;
+    }
+
+    /* Styling for mobile devices */
+    @media (max-width: 500px) {
+
+      nav.top-nav {
+        min-width: 300px;
+        font-size: 0.6em;
+      }
+
+      li {
+        line-height: 20px;
+        height: 20px;
+        padding: 0px 0px 0px 5px;
+      }
+
+      .page-content {
+        font-size: 0.6em;
+      }
+
+      img.masa-chinatown {
+        width: 200px;
+        height: 200px;
+      }
+
+      aside.email-me {
+        margin: 25px auto 15px auto;
+        width: 200px;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      textarea {
+        width: 200px;
+        height: 75px;
+        border: 0;
+        padding: 5px;
+        font-size: 9px;
+        margin-bottom: 2px;
+      }
+
+      #btn-send-message {
+        width: 124px;
+      }
+
+      #btn-clear-message {
+        width: 74px;
+      }
+    }
+
+    /**
+     * Footer
+     */
+    footer {
+      font-size: 1.2em;
+      line-height: 3em;
+      margin-top: 50px;
+      padding-top: 5px;
+      color: white;
+      clear: both;
+    }
+
+    footer a,
+    footer a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Site header -->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="top-nav">
+
+      <a class="logo" href="#">Masatoshi Nishiguchi</a>
+
+      <ul>
+        <li>
+          <a href="https://twitter.com/MNishiguchiDC" target="_blank"
+             data-toggle="tooltip" title="Twitter">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/mnishiguchi" target="_blank"
+             data-toggle="tooltip" title="Github">Github</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/mnishiguchi" target="_blank"
+             data-toggle="tooltip" title="Linkedin">Linkedin</a>
+        </li>
+        <li>
+          <a href="mailto:masatoshi.nishiguchi@udc.edu?Subject=Contact%20from%20http://mnishiguchi.github.io/"
+             data-toggle="tooltip" title="Email">Email</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-content">
+
+    <h1>Hello, this is Masatoshi</h1>
+    <p>
+      You can call me Masa.<br />
+      <br />
+      I really like coding. I enjoy building Rails and Android apps.<br />
+      Now I am ready to get an awesome job!
+    </p>
+
+    <img class="masa-chinatown" src="https://avatars1.githubusercontent.com/u/7563926?v=3&s=460" alt="masatoshi">
+
+    <aside class="email-me">
+      <h2>Please send me message!</h2>
+      <div>
+        <textarea id="message-to-masa"></textarea>
+        <button id="btn-clear-message">Clear</button>
+        <button id="btn-send-message">Send</button>
+      </div>
+    </aside>
+
+    <footer>
+      <small>&copy; 2015 <a href="http://mnishiguchi.github.io/" target="_blank">Masatoshi Nisihguchi</a></small>
+    </footer>
+
+  </div>
+
+  <!-- javascripts -->
+
+  <script>
+    /**
+     * Opens the default email program with title, address and message prefilled.
+     */
+    function sendEmail() {
+        window.location.href = "mailto:nishiguchi.masa@gmail.com"
+          + "?cc=masatoshi.nishiguchi@udc.edu"
+          + "&subject=" + escape("Hello, Masa!")
+          + "&body=" + escape(document.getElementById('message-to-masa').value)
+        ; // end window.location.href
+    }
+
+    /**
+     * Clear the text in the textarea.
+     */
+    function clearMsg() {
+        document.getElementById('message-to-masa').value = "";
+    }
+
+    // Add the click listener to send message button
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("btn-send-message").addEventListener("click", sendEmail, false);
+        document.getElementById("btn-clear-message").addEventListener("click", clearMsg, false);
+    });
+  </script>
+</html>
