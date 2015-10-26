@@ -6,6 +6,7 @@
   Date:     October 25, 2015
 -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,22 +38,23 @@
   <!-- Navigation -->
   <header>
     <ul>
-      <li><a href="https://dash.generalassemb.ly/MNISHIGUCHI/build-your-own-personal-website" target="_blank">About me</a></li>
-      <li><a href="https://github.com/mnishiguchi" target="_blank">code</a></li>
-      <li><a href="https://www.linkedin.com/in/mnishiguchi" target="_blank">resume</a></li>
-      <li><a href="https://dash.generalassemb.ly/MNISHIGUCHI/build-your-own-personal-website" target="_blank">contact</a></li>
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#code">code</a></li>
+      <li><a href="#contact-me">contact</a></li>
     </ul>
   </header>
 
   <div class="container">
+    <figure>
+      <img class="masa-photo" src="https://avatars1.githubusercontent.com/u/7563926?v=3&s=200">
+      <figcaption>Ruby on Rails developer</figcaption>
+    </figure>
 
-
-    <section class="menuItems">
-
-      <h1>Coding skills</h1>
+    <section class="sliderList" id="about-me">
+      <h1>About me</h1>
 
       <div>
-        <p>welsh onion soko <span class="price">$14</span><br />
+        <p>Brief introduction<br />
           <small>
             Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.
           </small>
@@ -60,7 +62,7 @@
       </div>
 
       <div>
-        <p>pastrami boudin tongue <span class="price">$22</span><br />
+        <p>Why I code?<br />
           <small>
             Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.
           </small>
@@ -68,21 +70,19 @@
       </div>
 
       <div>
-        <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />
+        <p>Hobbies<br />
           <small>
             Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.
           </small>
         </p>
       </div>
-
     </section>
 
-    <section class="menuItems">
-
+    <section class="sliderList" id="code">
       <h1>Coding skills</h1>
 
       <div>
-        <p>welsh onion soko <span class="price">$14</span><br />
+        <p>Ruby and Rails<br />
           <small>
             Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.
           </small>
@@ -90,7 +90,7 @@
       </div>
 
       <div>
-        <p>pastrami boudin tongue <span class="price">$22</span><br />
+        <p>HTML , CSS and JavaScript<br />
           <small>
             Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.
           </small>
@@ -98,13 +98,22 @@
       </div>
 
       <div>
-        <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />
+        <p>Java and Android<br />
           <small>
             Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.
           </small>
         </p>
       </div>
+    </section>
 
+    <section id="contact-me">
+      <h1>Contact me</h1>
+
+      <div>
+        <textarea id="message-to-masa" placeholder="your message"></textarea>
+        <button id="btn-clear-message">Clear</button>
+        <button id="btn-send-message">Send</button>
+      </div>
     </section>
 
   </div><!-- /.container -->
