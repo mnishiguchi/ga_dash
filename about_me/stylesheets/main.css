@@ -12,14 +12,14 @@
  */
 
 body {
-  background: url(http://i.imgur.com/kVJs7Pb.jpg);
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
+
+  background: url(http://i.imgur.com/kVJs7Pb.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
   color: #FFFFFF;
 }
 
@@ -108,12 +108,26 @@ header a.active {
 
 
 /**
- * Pop up list
+ * Slider list
  */
 
 /* Leaves some space from the top when hyperlink is clicked */
 h1 {
   padding-top: 50px;
+}
+
+h1 a {
+  font-size: 0.5em;
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #CCCCCC;
+}
+
+.lead {
+  font-size: 1.2em;
 }
 
 .sliderList div {
@@ -130,7 +144,7 @@ h1 {
   color: red;
   background: linear-gradient(to top, rgba(0,0,0,1) , rgba(0,0,0,.4));
   padding: 10px 30px;
-  text-align: justify;
+  text-align: left;
   line-height: 28px;
   position: absolute;
   bottom: 0;
@@ -145,12 +159,23 @@ h1 {
   opacity: 0;
 }
 
+/* Links */
+.sliderList div p a {
+  color: #CCCC00;
+}
+.sliderList div p a:hover {
+  color: #999900;
+}
+
 /* For when description is shown */
 .sliderList div.show-description p {
+  color: #E5E500;
   height: 150px;
-  color:yellow;
+  overflow: auto;
 }
+
 .sliderList div.show-description small {
+  color: #CCCC00;
   opacity: 1;
 }
 
