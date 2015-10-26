@@ -1,0 +1,207 @@
+/*
+  The styles for Masatoshi Nishiguchi's personal web site
+
+  Filename: main.css
+  Author:   Masatoshi Nishiguchi
+  Date:     October 25, 2015
+*/
+
+/**
+ * Universal
+ */
+
+body {
+  background: url(http://i.imgur.com/kVJs7Pb.jpg);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
+
+/**
+ * Logo and address
+ */
+
+.brand {
+  font-size: 4.0em;
+  font-weight: 800;
+  margin: 30px 0 0 0;
+}
+
+.address-bar {
+  color: #CCCCCC;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin: 10px 0 30px 0;
+}
+
+
+/**
+ * Navigation bar at the top
+ */
+
+header {
+  text-align: center;
+}
+
+ul {
+  padding: 30px 0;
+  background: rgba(99, 99, 99, .5);
+}
+
+li {
+  display: inline;
+  padding: 0px 30px 0px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header a {
+  text-decoration: none;
+  color: #DDDDDD;
+  padding: 0 20px;
+}
+
+header a:hover {
+  color: #BBBBBB;
+}
+
+header a.active {
+  color: #BBBBBB;
+}
+
+/**
+ * Styling for mobile devices
+ */
+
+@media (max-width: 500px) {
+
+}
+
+
+/**
+ * Cards
+ */
+
+section.menuItems {
+  margin-top: 50px;
+}
+
+.menuItems div {
+    height: 50px;
+    background: #EEEEEE;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    margin: 40px auto 0 auto;
+  }
+
+.menuItems div p {
+  color: red;
+  background: linear-gradient(to top, rgba(0,0,0,1) , rgba(0,0,0,.4));
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+          transition: height .5s;
+  -webkit-transition: height .5s;
+     -moz-transition: height .5s;
+}
+
+.menuItems div p small {
+  opacity: 0;
+}
+
+/* For when description is shown */
+.menuItems div.show-description p {
+  height: 150px;
+  color:yellow;
+}
+.menuItems div.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+
+
+/**
+ * Footer
+ */
+
+footer {
+  font-size: 1.2em;
+  line-height: 3em;
+  margin-top: 50px;
+  padding-top: 5px;
+  color: white;
+  clear: both;
+  text-align: center;
+}
+
+footer a,
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+/**
+ * Button
+ */
+
+button {
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:focus, button:active:focus, button.active:focus {
+    outline: 0 none;
+}
+
+.btn-outline {
+    background: none;
+    padding: 12px 22px;
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active,
+.btn-outline.active, .open > .dropdown-toggle.btn-outline {
+    color: #33a6cc;
+    background: #f0f0ff;
+    border-color: #33a6cc;
+}
+.btn-outline:active, .btn-outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}

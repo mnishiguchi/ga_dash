@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="/assets/jquery.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+
+  <style>
+    body {
+      font-family: helvetica, sans-serif;
+      background: #232323;
+    }
+
+    h1 {
+      font-family: 'Londrina Shadow', cursive;
+      font-size: 75px;
+      text-align: center;
+      margin: 60px 0 0 0;
+      color: #aaaaaa;
+    }
+    h2 {
+      text-align: center;
+      margin: 0 0 70px 0;
+      color: #bbbbbb;
+    }
+    div {
+      height: 200px;
+      background-size: cover;
+      margin: 0 auto;
+      max-width: 600px;
+      position: relative;
+      margin: 40px 0 0 0;
+      border-radius: 12px;
+    }
+    p {
+      color: rgba(255, 255, 255, 1);
+      background: #000;
+      background: linear-gradient(to top, rgba(0,0,0,1) , rgba(0,0,0,.4));
+      padding: 10px;
+      text-align: justify;
+      line-height: 28px;
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      height: 30px;
+              transition: height .5s;
+      -webkit-transition: height .5s;
+         -moz-transition: height .5s;
+    }
+    small {
+      opacity: 0;
+    }
+
+    /* For when description is shown */
+    .show-description p {
+      height: 150px;
+    }
+    .show-description small {
+      opacity: 1;
+    }
+
+    .first {
+      background: url("http://dash.ga.co/assets/firstcourse.jpg");
+    }
+    .second {
+      background: url("http://dash.ga.co/assets/secondcourse.jpg");
+    }
+    .dessert {
+      background: url("http://dash.ga.co/assets/dessertcourse.jpg");
+    }
+    .price {
+      float: right;
+    }
+
+    /* For vertically-oriented phones */
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        line-height: 40px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 20px 0 30px 0;
+      }
+      div {
+        margin: 20px 12px 0 12px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      small {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>esha's restaurant</h1>
+  <h2>A New York City Eatery</h2>
+
+  <section class="menu">
+    <div class="first">
+      <p>welsh onion soko <span class="price">$14</span><br />
+        <small>
+          Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.
+        </small>
+      </p>
+    </div>
+
+    <div class="second">
+      <p>pastrami boudin tongue <span class="price">$22</span><br />
+        <small>
+          Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.
+        </small>
+      </p>
+    </div>
+
+    <div class="dessert">
+      <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />
+        <small>
+          Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.
+        </small>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // jQuery
+    // $(".menu div").on("click", function() {
+    //   $(this).toggleClass("show-description");
+    // });
+
+    // Vanilla
+    var menuItems = document.querySelector('.menu div');
+
+    menuItems.addEventListener('click', function(e) {
+        menuItems.classList.toggle('show-description');
+    }, false);
+  </script>
+
+</body>

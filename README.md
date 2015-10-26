@@ -7,7 +7,7 @@
 - https://dash.generalassemb.ly/MNISHIGUCHI/build-your-own-blog-theme
 
 ## PROJECT 3: BUILD A SMALL BUSINESS WEBSITE
-
+- https://dash.generalassemb.ly/MNISHIGUCHI/build-your-own-business-website
 
 ## PROJECT 4: BUILD A CSS ROBOT
 
