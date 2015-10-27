@@ -156,12 +156,17 @@ h1 a:hover {
 }
 
 .sliderList div p small {
-  opacity: 0;
+  /*opacity: 0;*/
+  /*display: none;*/
+  visibility: hidden;
 }
 
 /* Links */
 .sliderList div p a {
   color: #CCCC00;
+
+  pointer-events: none;
+  cursor: default;
 }
 .sliderList div p a:hover {
   color: #999900;
@@ -176,9 +181,15 @@ h1 a:hover {
 
 .sliderList div.show-description small {
   color: #CCCC00;
-  opacity: 1;
+  /*opacity: 1;*/
+  /*display: block;*/
+  visibility: visible;
 }
 
+.sliderList div.show-description p a {
+  pointer-events: auto;
+  cursor: auto;
+}
 
 /**
  * Card
