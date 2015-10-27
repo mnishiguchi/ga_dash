@@ -153,19 +153,25 @@ h1 a:hover {
           transition: height .5s;
   -webkit-transition: height .5s;
      -moz-transition: height .5s;
+
+  overflow: hidden;  /* Ignore the extra space that the hidden test occupies */
+}
+
+.sliderList div p span:hover {
+  color: #A00;
 }
 
 .sliderList div p small {
   /*opacity: 0;*/
   /*display: none;*/
-  visibility: hidden;
+  visibility: hidden;  /* Hide the description text by default */
 }
 
 /* Links */
 .sliderList div p a {
-  color: #CCCC00;
+  color: yellow;
 
-  pointer-events: none;
+  pointer-events: none;  /* Desable the links */
   cursor: default;
 }
 .sliderList div p a:hover {
@@ -173,21 +179,29 @@ h1 a:hover {
 }
 
 /* For when description is shown */
+
+.sliderList div.show-description span,
+.sliderList div.show-description span:hover {
+  color: #BABABA;
+  text-shadow: 1px 0 red, 0 -1px red, -1px 0 red, 0 1px red;
+}
+
 .sliderList div.show-description p {
-  color: #E5E500;
+  color: yellow;
   height: 150px;
   overflow: auto;
 }
 
-.sliderList div.show-description small {
-  color: #CCCC00;
+.sliderList div.show-description p small {
+  color: yellow;
   /*opacity: 1;*/
   /*display: block;*/
   visibility: visible;
+  text-shadow: 1px 0 blue, 0 -1px blue, -1px 0 blue, 0 1px blue;
 }
 
 .sliderList div.show-description p a {
-  pointer-events: auto;
+  pointer-events: auto;  /* Activate the links */
   cursor: auto;
 }
 

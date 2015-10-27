@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
   /*
    * 1. Add click listener to all the menu items
    * 2. Toggle the class on click events
+   * 3. Reset the scroll position to (0, 0)
    */
-  [].forEach.call( document.querySelectorAll( '.sliderList div' ), function ( el ) {
-      el.addEventListener( 'click', function () {
-          el.classList.toggle('show-description');
+  [].forEach.call( document.querySelectorAll( '.sliderList div' ), function ( aDiv ) {
+      aDiv.addEventListener( 'click', function () {
+          aDiv.classList.toggle('show-description');
+          aDiv.getElementsByTagName("P")[0].scrollTop = 0;
       }, false );
   });
 });
