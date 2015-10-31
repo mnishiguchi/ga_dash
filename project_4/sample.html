@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="/assets/jquery.js"></script>
+
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+
+  <!-- Styling -->
+  <style>
+    /* The container for the robot
+       Positioning the entire robot
+    */
+    .robot {
+      position: relative;
+      left: 200px;
+    }
+
+    /* The parts for the robot
+       Positioning each part relative to the container
+    */
+    .beep {
+      width: 5px;
+      height: 0;
+      border: 5px solid transparent;
+      border-top: 10px solid #777;
+      border-bottom: 80px solid #888;
+
+      position: relative;
+      left: 140px;
+    }
+
+    /* Defines a keyframe animation called blink
+       50% of the way through the animation, the color changes from white to red
+       Make sure that the keyframe prefixes match up with the gradient prefixes
+    */
+    @keyframes blink {
+      50% {
+        background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+        background-size: 75px 150px;   /* width height */
+      }
+    }
+    @-webkit-keyframes blink {
+      50% {
+        background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+        background-size: 75px 150px;   /* width height */
+      }
+    }
+    @-moz-keyframes blink {
+      50% {
+        background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+        background-size: 75px 150px;   /* width height */
+      }
+    }
+
+    /* This class is applied to .brain by jQuery code
+       Makes the robot's eyes blink */
+    .laser {
+              animation: blink .5s infinite;
+      -webkit-animation: blink .5s infinite;
+         -moz-animation: blink .5s infinite;
+    }
+
+    .brain {
+      background:         radial-gradient(circle, white 15%, transparent 40%), #cc5;
+      background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+      background:    -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+
+      background-size: 75px 150px;   /* width height */
+
+      height: 150px;
+      width: 150px;
+      border-radius: 60px 60px 10px 10px;
+      border-bottom: 40px solid #666;
+
+      position: relative;
+      left: 70px;
+    }
+
+    .torso {
+      height: 0;
+      width: 140px;
+      border-top: 300px solid #BC6;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+      border-radius: 20px 20px 100px 100px;
+    }
+
+    /* Arms */
+    .left {
+      font-family: 'Poller One', verdana, arial, sans-serif;
+      font-weight: bold;
+      font-size: 250px;
+      color: #666;
+
+              transform: rotate(200deg);
+      -webkit-transform: rotate(200deg);
+         -moz-transform: rotate(200deg);
+
+      position: relative;
+      left: -190px;
+      top: -320px;
+      z-index: -1;
+    }
+    .right {
+      font-family: 'Poller One', verdana, arial, sans-serif;
+      font-weight: bold;
+      font-size: 250px;
+      color: #666;
+
+              transform: scaleY(-1) rotate(20deg);
+      -webkit-transform: scaleY(-1) rotate(20deg);
+         -moz-transform: scaleY(-1) rotate(20deg);
+
+      position: relative;
+      top: -620px;
+      left: 190px;
+      z-index: -1;
+    }
+
+    .foot {
+      height: 40px;
+      width: 40px;
+      background: #CCC;
+      border-radius: 40px;
+      border: 15px solid #999;
+
+      position: relative;
+      left: 110px;
+      top: -10px;
+      z-index: -1;
+    }
+
+    /* Define a keyframe animation that affect the position of the image
+       starting from 800px away from the lafe side of the screen
+       then moving to its defined left position of 400px */
+    @keyframes dance {
+      from {
+        left: 800px;
+      }
+    }
+    @-webkit-keyframes dance {
+      from {
+        left: 800px;
+      }
+    }
+    @-moz-keyframes dance {
+      from {
+        left: 800px;
+      }
+    }
+
+    img {
+              animation: dance 4s infinite;
+      -webkit-animation: dance 4s infinite;
+         -moz-animation: dance 4s infinite;
+
+      position: absolute;
+      top: 200px;
+      left: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="robot">
+    <div class="beep"></div>
+    <div class="brain"></div>
+    <div class="torso">
+      <div class="left">j</div>
+      <div class="right">j</div>
+    </div>
+    <div class="foot"></div>
+  </div>
+
+  <button class="flash">laser eyes on/off</button>
+  <button class="color">change color!</button>
+  <button class="moves">break/dance</button>
+
+  <img src="/assets/dance_cotter.gif">
+
+  <script>
+    // When flash button is clicked, toggle laser class
+    $(".flash").click(function() {
+      $(".brain").toggleClass("laser");
+    });
+
+    // When color button is clicked, pick a number 0-255
+    $(".color").click(function() {
+      // Generate random values for RGB
+      var red   = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue  = Math.floor(Math.random() * 255);
+
+      // Prepare a CSS RGBA value as a string
+      var randomRGBA = 'rgba(' + red + ',' + green + ',' + blue + ',1)';
+
+      // Set the backbround to a new color
+      $("body").css("background", randomRGBA);
+    });
+
+      // Display the number in an alert window
+      // alert(randomRGBA);
+    });
+
+    $(".moves").click(function() {
+      $("img").toggle();
+    });
+  </script>
+</body>
