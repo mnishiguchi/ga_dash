@@ -1,4 +1,5 @@
 # ga_dash
+- https://dash.generalassemb.ly/projects
 
 **PROJECT 1: BUILD A PERSONAL WEBSITE**
 - https://dash.generalassemb.ly/MNISHIGUCHI/build-your-own-personal-website
